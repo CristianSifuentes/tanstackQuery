@@ -1,6 +1,6 @@
 
-import './App.css'
 import RepoStats from './features/basic/RepoStats'
+import UsersList from './features/users/UsersList'
 
 
 function App() {
@@ -15,6 +15,16 @@ function App() {
       <section>
         <h2> 1) Basic useQuery (Github repo)</h2>
         <RepoStats />
+      </section>
+
+
+      <section>
+        <h2>2) Pagination with placeholderData (keepPreviousData-like)</h2>
+        <UsersList onSelect={(id) => console.log('Selected user ID:', id)} />
+        <div style={{marginTop: 8}}>
+
+        </div>
+
       </section>
     </div>
   )

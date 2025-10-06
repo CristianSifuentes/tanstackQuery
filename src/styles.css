@@ -1,0 +1,11 @@
+:root { color-scheme: light dark; --card: color-mix(in srgb, Canvas 92%, #000); }
+*{box-sizing:border-box}
+body { margin: 0; background: canvas; color: CanvasText; font-family: Inter, system-ui, Arial, sans-serif; }
+main { padding: 24px; max-width: 980px; margin: 0 auto; }
+section { margin: 24px 0; padding: 16px; background: var(--card); border: 1px solid color-mix(in srgb, CanvasText 12%, transparent); border-radius: 14px; }
+button, input { padding: 6px 10px; border-radius: 8px; border: 1px solid color-mix(in srgb, CanvasText 20%, transparent); background: canvas; color: CanvasText; }
+h1, h2, h3, h4 { margin-top: 0; }
+hr { margin: 24px 0; opacity: .2; }
+.small { font-size: 12px; opacity: .7; }
+.grid { display: grid; gap: 8px; }
+.flex { display: flex; gap: 8px; align-items: center; }
