@@ -3,15 +3,13 @@ import { api, Endpoints } from '../../api/client';
 import type { GithubRepo } from '../../api/types';
 
 export default function RepoStats() {
-
- const {data, error, isPending, isRefetching, refetch} = useQuery({
+  const { data, error, isPending, isRefetching, refetch } = useQuery({
     queryKey: ['repoData'],
     queryFn: () => api<GithubRepo>(Endpoints.repo),
   });
 
-  if (isPending) return <div>Loading...</div>;
-  if (error) return <div>Error: {(error as Error).message}</div>;
-  if (!data) return <div>No data</div>;
+  if (isPending) return <p>Loading…</p>;
+  if (error) return <p style={{ color: 'crimson' }}>Error: {(error as Error).message}</p>;
 
   return (
     <div className="grid">
